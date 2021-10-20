@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 03</title>
+</head>
+<body>
+    <ul id="contenedor">
+    </ul>
+    <script>
+        var i=0
+        var n = 1
+        function cargarNumero(n){
+        var contenedor = document.getElementById('contenedor')
+        var li = document.createElement('li')
+        var txt = document.createTextNode(n+' desde la funcion')
+        li.appendChild(txt)
+        contenedor.appendChild(li)
+        }
+
+    while(i<7){
+        i = Math.random()*8
+        cargarNumero(i)
+    }
+    </script>
+</body>
+</html>

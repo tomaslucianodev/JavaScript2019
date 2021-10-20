@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 02</title>
+</head>
+<body>
+    <script>
+        function Alumno(nombre, edad, email){
+            this.nombre = nombre
+            this.edad = edad
+            this.email = email
+            this.saludar = function(){
+                document.write('Hola soy '+nombre+'<br>')
+            }
+        }
+        let tomas = new Alumno('Tomás',18,'tomaslopez.dosmiluno@gmail.com')
+        let facundo = new Alumno('Facundo',16,'facundolopez867@gmail.com')
+        facundo.saludar()
+        document.write(tomas.email)
+    </script>
+</body>
+</html>

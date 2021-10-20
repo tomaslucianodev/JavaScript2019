@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 01</title>
+</head>
+<body>
+    <script>
+        var alumno = {
+            nombre: 'Tomás',
+            edad: 18,
+            email: 'tomaslopez.dosmiluno@gmail.com',
+            saludar:function(){
+                document.write('Hola soy Tomás')
+            },
+            materias:['Arte', 'Laboratorio de Aplicaciones III', 'Filosofia', 'Laboratorio de Sistemas Operativos III', 'Literatura', 'Laboratorio de Programacion III', 'Matematica aplicada', 'Laboratorio de Hardware III', 'Ingles', 'Sistemas digitales', 'Derecho del trabajo', 'Seguridad informatica']
+        }
+        document.write('La edad del alumno es: '+ alumno.edad+'<br>')
+        document.write('El nombre del alumno es: '+ alumno['nombre']+'<br>')
+        document.write('La materia cursada es: '+alumno.materias[1]+'<br>')
+        alumno.saludar()
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 02</title>
+</head>
+<body>
+    <ul id="contenedor">
+    </ul>
+
+    <script>
+
+        var n = 1
+        function cargarNumero(n){
+        var contenedor = document.getElementById('contenedor')
+        var li = document.createElement('li')
+        var txt = document.createTextNode(n+' desde la funcion')
+        li.appendChild(txt)
+        contenedor.appendChild(li)
+        }
+
+        for(var i=0; i<100; i++){
+            cargarNumero(i+1)
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 01</title>
+    <style>
+        .verde{
+            color: green;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="saludos">
+
+    </div>
+    <h1 id="saludo"></h1>
+    <input type="text" id="entrada"><br><br>
+    <button id="btn">Saludame</button>
+    <p class="" id="cantidades"></p>
+    <p id="asistieron">
+
+    </p>
+    <script>
+        let cantidadDeSaludos = 0
+        let cantidadDeAsistencias = 0
+        let titulo = document.getElementById('saludo')
+        let entradaLoca = document.getElementById('entrada')
+        let btn = document.getElementById('btn')
+        let contenedor = document.getElementById('saludos')
+        let cantidades = document.getElementById('cantidades')
+        let asistieron = document.getElementById('asistieron')
+        console.log(titulo, entradaLoca, btn)
+
+        //titulo.innerHTML = 'titulo cambiado desde js'
+        btn.innerHTML = 'pinchame'
+        //alert('Bienvenido a mi sitio web')
+
+        btn.addEventListener('click', function(){
+            cantidadDeSaludos++
+            let tipo = entradaLoca.value
+            if(tipo != ''){
+                let saludito = 'Invitado: '+tipo
+                var sal = document.createElement('h1')
+                var txt = document.createTextNode(saludito)
+                sal.appendChild(txt)
+                contenedor.appendChild(sal)
+                if (cantidadDeSaludos>1){
+                    cantidades.innerHTML = 'Tenemos '+cantidadDeSaludos+' invitados' 
+                }
+                else{
+                    cantidades.innerHTML = 'Tenemos '+cantidadDeSaludos+' invitado' 
+                }
+            }
+        //    titulo.innerHTML = 'Hola '+tipo+', bienvenido!'
+        })
+
+        document.addEventListener('click',function(e){
+            if(e.target.localName == 'h1'){
+                e.target.innerHTML = e.target.innerHTML + ' asistió'
+                e.target.classList.add('verde')
+                cantidadDeAsistencias++
+                asistieron.innerHTML = 'Asistieron: '+cantidadDeAsistencias
+            }
+        })
+            
+    </script>
+</body>
+</html>

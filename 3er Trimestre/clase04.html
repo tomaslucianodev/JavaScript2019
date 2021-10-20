@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 04</title>
+</head>
+<body>
+    <script>
+        class Humano{
+            constructor(nombre, edad, email){
+                this.nombre = nombre
+                this.edad = edad
+                this.email = email
+            }
+            saludar(){
+                document.write('Saludar '+this.nombre)
+            }
+        }
+
+        class Alumno extends Humano{
+            estudiar(){
+                document.write('El alumno '+this.nombre+' estudió'+'<br>')
+            }
+        }
+
+        class Profe extends Humano{
+            calificar(){
+                document.write('El profe '+this.nombre+' calificó'+'<br>')
+            }
+        }
+
+        let tomas = new Alumno('Tomás',18,'tomaslopez.dosmiluno@gmail.com')
+        let abdala = new Profe('Abdala',40,'abdala@gmail.com')
+
+        document.write(tomas.nombre+'<br>')
+        tomas.estudiar()
+        document.write(abdala.nombre+'<br>')
+        abdala.calificar()
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 05</title>
+</head>
+<body>
+    <script>
+        class Humano{
+            constructor(nombre, edad, email){
+                this._nombre = nombre
+                this._edad = edad
+                this._email = email
+            }
+            saludar(){
+                document.write('Saludó '+this._nombre)
+            }
+            get nombre(){
+                return this._nombre
+            }
+            set nombre(nombre){
+                this._nombre = nombre
+            }
+        }
+
+        let tomas = new Humano('Tomás',18,'tomaslopez.dosmiluno@gmail.com')
+
+        tomas.nombre = 'Pedrito'
+        tomas.saludar()
+        
+    </script>
+</body>
+</html>

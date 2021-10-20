@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 11</title>
+</head>
+<body>
+    <script>
+        //Scope
+        let tv = 'programas de bienvenida'
+
+        function cocina(){
+            let heladera = 'comida'
+            let tv = 'programas de tv de paulina cocina'
+            licuadora = 'smoothie hipster'
+            console.log(heladera, 'desde la cocina')
+            console.log(tv, 'desde la cocina')
+            //console.log(licuadora, 'desde la cocina')
+        }
+        cocina()
+
+        function living(){
+            //let tv = 'programas de tv aburridos'
+            console.log(tv, 'desde el living')
+        }
+        living()
+        console.log(tv, 'desde la casa general')
+        console.log(licuadora, 'desde la casa general')
+    </script>
+</body>
+</html>

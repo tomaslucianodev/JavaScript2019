@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 06</title>
+</head>
+<body>
+    <script>
+        class Humano{
+            constructor(nombre, edad, email){
+                this._nombre = nombre
+                this._edad = edad
+                this._email = email
+            }
+            saludar(){
+                document.write('Saludó '+this._nombre)
+            }
+            get nombre(){
+                return this._nombre
+            }
+            set nombre(nombre){
+                this._nombre = nombre
+            }
+            static saludarEstatico(){
+                document.write('saludo desde la clase directo '+'<br>')
+            }
+        }
+        class Alumno extends Humano{
+            estudiar(){
+                document.write('El alumno '+this.nombre+' estudió'+'<br>')
+            }
+        }
+
+        class Profe extends Humano{
+            calificar(){
+                document.write('El profe '+this.nombre+' calificó'+'<br>')
+            }
+        }
+
+        class CreateHuman{
+            static create(nombre, edad, email, tipo){
+                if(tipo == 'profe'){
+                    return new Profe(nombre, edad, email)
+                }else if(tipo == 'alumno'){
+                    return new Alumno(nombre, edad, email)
+                }else{
+                    document.write('No es un tipo de humano reconocido ')
+                }
+        }
+    }
+        let abdala = CreateHuman.create('Abdala ',40,'abdala@gmail.com','profe')
+        
+        abdala.saludar()
+        abdala.calificar()
+    </script>
+</body>
+</html>

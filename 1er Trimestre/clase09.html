@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 09</title>
+</head>
+<body>
+    <script>
+        let scorePlayer1 = Math.floor(Math.random() * (1000 - 1)) + 1;
+        let scorePlayer2 = Math.floor(Math.random() * (1000 - 1)) + 1;
+        let scorePlayer3 = Math.floor(Math.random() * (1000 - 1)) + 1;
+        let scorePlayer4 = Math.floor(Math.random() * (1000 - 1)) + 1;
+        let scorePlayer5 = Math.floor(Math.random() * (1000 - 1)) + 1;
+        let perfectScore = 100
+
+        if(scorePlayer1 > scorePlayer2 && scorePlayer1 > scorePlayer3 && scorePlayer1 > scorePlayer4 && scorePlayer1 > scorePlayer5 || scorePlayer1 == perfectScore){
+            console.log('El jugador 1 ha ganado con '+scorePlayer1+' puntos')
+        }
+        else if(scorePlayer2 > scorePlayer1 && scorePlayer2 > scorePlayer3 && scorePlayer2 > scorePlayer4 && scorePlayer2 > scorePlayer5 || scorePlayer2 == perfectScore){
+            console.log('El jugador 2 ha ganado con '+scorePlayer2+' puntos')
+        }
+        else if(scorePlayer3 > scorePlayer1 && scorePlayer3 > scorePlayer2 && scorePlayer3 > scorePlayer4 && scorePlayer3 > scorePlayer5 || scorePlayer3 == perfectScore){
+            console.log('El jugador 3 ha ganado con '+scorePlayer3+' punto')
+        }
+        else if(scorePlayer4 > scorePlayer1 && scorePlayer4 > scorePlayer2 && scorePlayer4 > scorePlayer3 && scorePlayer4 > scorePlayer5 || scorePlayer4 == perfectScore){
+            console.log('El jugador 4 ha ganado con '+scorePlayer4+' punto')
+        }
+        else if(scorePlayer5 > scorePlayer1 && scorePlayer5 > scorePlayer2 && scorePlayer5 > scorePlayer3 && scorePlayer5 > scorePlayer4 || scorePlayer5 == perfectScore){
+            console.log('El jugador 5 ha ganado con '+scorePlayer5+' punto')
+        }
+        else{
+            console.log('No hay ganadores, es un empate')
+        }
+        console.log('Jugador 1: '+scorePlayer1)
+        console.log('Jugador 2: '+scorePlayer2)
+        console.log('Jugador 3: '+scorePlayer3)
+        console.log('Jugador 4: '+scorePlayer4)
+        console.log('Jugador 5: '+scorePlayer5)
+</script>
+</body>
+</html>
